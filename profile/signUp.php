@@ -40,15 +40,15 @@
             <form method="post" action="../php/register.php">
                 <div class="prof_inp">
                     <label>Логин</label>
-                    <input type="text" name="login" placeholder="Введите логин">
+                    <input type="text" name="login" placeholder="Введите логин" maxlength="16">
                 </div>
                 <div class="prof_inp">
                     <label>Пароль</label>
-                    <input type="password" name="password" placeholder="Введите пароль">
+                    <input type="password" name="password" placeholder="Введите пароль" maxlength="128">
                 </div>
                 <div class="prof_inp">
                     <label>Подтвердите пароль</label>
-                    <input type="password" name="submit_password" placeholder="Введите пароль">
+                    <input type="password" name="submit_password" placeholder="Введите пароль" maxlength="128">
                 </div>
                 <button type="submit" class="main_btn prof_btn">Зарегистрироваться</button>
             </form>

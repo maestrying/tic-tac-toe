@@ -175,3 +175,109 @@ input {
 .rule_descr {
     margin: 30px 0 10px 0;
 }
+
+            /* W A I T   R O O M */
+.block-with-code {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.code {
+    width: 396px;
+    padding: 0;
+    text-align: center;
+    font-weight: 900;
+}
+
+.field {
+    width: 240px;
+    height: 240px;
+}
+
+.field_block-1, 
+.field_block-2, 
+.field_block-3, 
+.field_block-4, 
+.field_block-5, 
+.field_block-6, 
+.field_block-7, 
+.field_block-8, 
+.field_block-9 {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.field-horizon {display: flex;}
+
+
+.field_block-1 {
+    border-right: 5px solid #182234;
+    border-bottom: 5px solid #182234;
+}
+.field_block-2 {
+    border-bottom: 5px solid #182234;
+}
+.field_block-3 {
+    border-left: 5px solid #182234;
+    border-bottom: 5px solid #182234;
+}
+
+.field_block-4 {
+    border-right: 5px solid #182234;
+}
+.field_block-6 {
+    border-left: 5px solid #182234;
+}
+
+.field_block-7 {
+    border-top: 5px solid #182234;
+    border-right: 5px solid #182234;
+}
+.field_block-8 {
+    border-top: 5px solid #182234;
+}
+.field_block-9 {
+    border-top: 5px solid #182234;
+    border-left: 5px solid #182234;
+}
+
+.TicTac-ico {
+    width: 50px;
+}
+
+
+            /* R O O M */
+.game_info {
+    display: flex;
+    width: 400px;
+    font-weight: 900;
+}
+
+.counter {
+    font-size: 66px;
+    font-weight: 900;
+    margin: 0 20px;
+}
+
+.info_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info_name {
+    font-size: 26px;
+}
+
+.new_game {
+    margin-top: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+}

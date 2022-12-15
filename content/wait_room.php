@@ -28,10 +28,30 @@
             </div>
         </div>
     </header>
-    <div class="content">
-        <div class="container" style="height: 200px;">
-            <input type="text" class="code_input" placeholder="Введите код игры" style="width: 396px; border: 2px solid #4469b483;">
-            <button class="main_btn">Подключиться к комнате</button>
+    <div class="content" style="justify-content: flex-start;">
+        <div class="container" style="height: 200px; justify-content: center;">
+            <div class="block-with-code">
+                <p class="rule_descr" style="text-align: center; margin-top: 0">Код игры:</p>
+                <div class="rule code">4444</div> <!-- здесь будет сгенерированный код игры -->
+            </div>
+            <h2 style="margin-top: 20px;">Ожидание игрока</h2>
+        </div>
+        <div class="field" style="margin-top: 40px;">
+            <div class="field-horizon">
+                <div class="field_block-1"></div>
+                <div class="field_block-2"></div>
+                <div class="field_block-3"></div>
+            </div>
+            <div class="field-horizon">
+                <div class="field_block-4"></div>
+                <div class="field_block-5"></div>
+                <div class="field_block-6"></div>
+            </div>
+            <div class="field-horizon">
+                <div class="field_block-7"></div>
+                <div class="field_block-8"></div>
+                <div class="field_block-9"></div>
+            </div>
         </div>
     </div>
 </body>

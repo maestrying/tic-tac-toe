@@ -31,7 +31,7 @@
 
     <div class="content">
         <div class="container" style="height: 500px;">
-            <button class="main_btn">Создать комнату</button>
+            <button class="main_btn" onclick="window.location.href = 'wait_room.php';">Создать комнату</button> <!-- удалить переадресацию-->
             <div class="rules">
                 <h4>ПРАВИЛА</h4>
                 <p class="rule_descr">Режим игры</p>
