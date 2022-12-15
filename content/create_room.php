@@ -18,7 +18,7 @@
 </head>
 <body>
     <header>
-        <a><img src="../assets/logo.svg" alt="logo"></a>
+        <a href="start_pg.php"><img src="../assets/logo.svg" alt="logo"></a>
         <div class="drop_menu">
             <button onclick="dropMenu()" class="dropbtn">профиль</button>
             <div id="myDropdown" class="dropdown-content">
@@ -30,12 +30,23 @@
     </header>
 
     <div class="content">
-        <div class="container">
-            <div class="descr">
-                <h2>Добро пожаловать, <?= $_SESSION['user'] ?>!</h2>
+        <div class="container" style="height: 500px;">
+            <button class="main_btn">Создать комнату</button>
+            <div class="rules">
+                <h4>ПРАВИЛА</h4>
+                <p class="rule_descr">Режим игры</p>
+                <div class="rule">
+                    3x3
+                </div>
+                <p class="rule_descr">Время на игрока</p>
+                <div class="rule">
+                    1 мин.
+                </div>
+                <p class="rule_descr">Первый ход</p>
+                <div class="rule">
+                    Произвольно
+                </div>
             </div>
-            <button class="main_btn" onclick="window.location.href = 'create_room.php';">Создать комнату</button>
-            <button class="main_btn">Подключиться к комнате</button>
         </div>
     </div>
 </body>

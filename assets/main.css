@@ -28,6 +28,10 @@ header {
     justify-content: space-between;
 }
 
+h4 {
+    text-align: center;
+}
+
 
             /* H E A D E R */
 .drop_menu {
@@ -39,16 +43,12 @@ header {
     border: none;
     background-color: transparent;
     color: white;
-    font-size: 16px;
+    font-size: #fff;
     text-transform: uppercase;
     font-weight: 300;
     cursor: pointer;
-}
-/* 
-.dropbtn::after {
-    content: "̬ ";
     font-size: 16px;
-} */
+}
 
 .dropdown-content {
     display: none;
@@ -68,13 +68,6 @@ header {
     display: block;
     text-align: center;
 }
-
-.nick::after {
-    position: absolute;
-    content: "✎";
-    right: 30px;
-}
-
 
             /* C O N T E N T */
 .content {
@@ -100,8 +93,11 @@ header {
 
 .err {
     color: #FF5D5D;
-    font-size: 12px;
+    font-size: 16px;
+    position: absolute;
+    top: 280px;
 }
+
 .descr {
     height: 60px;
     display: flex;
@@ -162,4 +158,20 @@ input {
 
 .call a {
     text-decoration: underline;
+}
+
+            /* C R E A T E   R O O M */
+.rule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #446AB4;
+    border-radius: 5px;
+}
+
+.rule_descr {
+    margin: 30px 0 10px 0;
 }
