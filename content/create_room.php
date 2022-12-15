@@ -23,7 +23,7 @@
             <button onclick="dropMenu()" class="dropbtn">профиль</button>
             <div id="myDropdown" class="dropdown-content">
                 <p style="font-weight: 900;"><?= $_SESSION['user'] ?></p>
-                <a href="#">Статистика</a>
+                <a href="stat.php">Статистика</a>
                 <a href="../php/logout.php">Выход</a>
             </div>
         </div>
@@ -31,7 +31,7 @@
 
     <div class="content">
         <div class="container" style="height: 500px;">
-            <button class="main_btn" onclick="window.location.href = 'wait_room.php';">Создать комнату</button> <!-- удалить переадресацию-->
+            <button class="main_btn">Создать комнату</button>
             <div class="rules">
                 <h4>ПРАВИЛА</h4>
                 <p class="rule_descr">Режим игры</p>

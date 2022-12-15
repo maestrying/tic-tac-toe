@@ -281,3 +281,99 @@ input {
     justify-content: center;
     font-weight: 900;
 }
+
+            /* S T A T */
+.stat_h {
+    border: 2px solid #446AB4;
+    width: 400px;
+    height: 70px;
+    font-size: 26px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.stat_table {
+    width: 700px;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat_cont {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat_num {
+    font-size: 26px;
+}
+
+.adv {
+    width: 800px;
+    height: 180px;
+    border: 3px solid #44B4A0;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    color: #44B4A0;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.adv:hover {
+    background-color: #44B4A0;
+    color: #0F1521;
+    filter: drop-shadow(0px 0px 22px rgba(68, 180, 160, 0.35));
+}
+
+.link_cont a {
+    transition: .5s;
+    color: #44B4A0;
+    text-transform: lowercase;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.adv:hover .link_cont a {
+    color: #0F1521;
+}
+
+.adv-p {
+    letter-spacing: 6px;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.adv-examp {
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.git-links {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.link_cont {
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.adv img {
+    position: absolute;
+    right: -26px;
+    top: 60px;
+}

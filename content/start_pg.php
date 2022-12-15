@@ -23,7 +23,7 @@
             <button onclick="dropMenu()" class="dropbtn">профиль</button>
             <div id="myDropdown" class="dropdown-content">
                 <p style="font-weight: 900;"><?= $_SESSION['user'] ?></p>
-                <a href="#">Статистика</a>
+                <a href="stat.php">Статистика</a>
                 <a href="../php/logout.php">Выход</a>
             </div>
         </div>
