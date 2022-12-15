@@ -35,7 +35,7 @@
                 <h2>Добро пожаловать, <?= $_SESSION['user'] ?>!</h2>
             </div>
             <button class="main_btn" onclick="window.location.href = 'create_room.php';">Создать комнату</button>
-            <button class="main_btn">Подключиться к комнате</button>
+            <button class="main_btn" onclick="window.location.href = 'conn_room.php';">Подключиться к комнате</button>
         </div>
     </div>
 </body>

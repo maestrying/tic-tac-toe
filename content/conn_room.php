@@ -30,23 +30,9 @@
     </header>
 
     <div class="content">
-        <div class="container" style="height: 500px;">
-            <button class="main_btn">Создать комнату</button>
-            <div class="rules">
-                <h4>ПРАВИЛА</h4>
-                <p class="rule_descr">Режим игры</p>
-                <div class="rule">
-                    3x3
-                </div>
-                <p class="rule_descr">Время на ход</p>
-                <div class="rule">
-                    1 мин.
-                </div>
-                <p class="rule_descr">Первый ход</p>
-                <div class="rule">
-                    Произвольно
-                </div>
-            </div>
+        <div class="container" style="height: 200px;">
+            <input type="text" class="code" placeholder="Введите код игры" style="width: 97%; border: 2px solid #4469b483;">
+            <button class="main_btn">Подключиться к комнате</button>
         </div>
     </div>
 </body>
