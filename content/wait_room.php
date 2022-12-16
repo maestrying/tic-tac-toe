@@ -32,7 +32,7 @@
         <div class="container" style="height: 200px; justify-content: center;">
             <div class="block-with-code">
                 <p class="rule_descr" style="text-align: center; margin-top: 0">Код игры:</p>
-                <div class="rule code">4444</div> <!-- здесь будет сгенерированный код игры -->
+                <div class="rule code"><?= $_SESSION['room'] ?></div>
             </div>
             <h2 style="margin-top: 20px;">Ожидание игрока</h2>
         </div>
@@ -54,5 +54,21 @@
             </div>
         </div>
     </div>
+    <script src="../scripts/jquery.min.js"></script>
+    <script>
+        function check_guest(){
+            $.ajax({
+                url: "../php/check_guest.php",
+                type: "post",
+                data: $(this).serialize(),
+                success: function (data){
+                    if (data === "joined"){
+                        window.location.href = '../content/room.php';
+                    }
+                }
+            })
+        }
+        setInterval(check_guest, 1000);
+    </script>
 </body>
 </html>

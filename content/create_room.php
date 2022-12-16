@@ -1,5 +1,15 @@
 <?php
     session_start();
+    include_once ("../php/connect.php");
+
+    if (isset($_SESSION['room'])){
+        $room_id = $_SESSION['room'];
+        $query = "delete from rooms where id='$room_id'";
+        mysqli_query($conn, $query);
+        unset($_SESSION['host']);
+        unset($_SESSION['guest']);
+        unset($_SESSION['room']);
+    }
     if (!isset($_SESSION['user'])){
         header("Location: start_pg.php");
     }
@@ -31,7 +41,9 @@
 
     <div class="content">
         <div class="container" style="height: 500px;">
-            <button class="main_btn">Создать комнату</button>
+            <form method="post" action="../php/host_room.php" style="height: auto">
+                <button type="submit" class="main_btn">Создать комнату</button>
+            </form>
             <div class="rules">
                 <h4>ПРАВИЛА</h4>
                 <p class="rule_descr">Режим игры</p>
