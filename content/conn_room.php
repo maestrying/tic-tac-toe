@@ -1,5 +1,16 @@
 <?php
     session_start();
+    include_once ("../php/connect.php");
+
+    if (isset($_SESSION['room'])){
+        $room_id = $_SESSION['room'];
+        $query = "delete from rooms where id='$room_id'";
+        mysqli_query($conn, $query);
+        unset($_SESSION['host']);
+        unset($_SESSION['guest']);
+        unset($_SESSION['room']);
+    }
+
     if (!isset($_SESSION['user'])){
         header("Location: start_pg.php");
     }
@@ -30,8 +41,10 @@
     </header>
     <div class="content">
         <div class="container" style="height: 200px;">
-            <input type="text" class="code_input" placeholder="Введите код игры" style="width: 396px; border: 2px solid #4469b483;">
-            <button class="main_btn">Подключиться к комнате</button>
+            <form method="post" action="../php/join.php" style="height: 130px">
+                <input type="text" class="code_input" name='room_id' placeholder="Введите код игры" style="width: 396px; border: 2px solid #4469b483;">
+                <button type="submit" class="main_btn">Подключиться к комнате</button>
+            </form>
         </div>
     </div>
 </body>

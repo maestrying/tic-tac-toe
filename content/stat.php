@@ -1,5 +1,17 @@
 <?php
     session_start();
+
+    include_once ("../php/connect.php");
+
+    if (isset($_SESSION['room'])){
+        $room_id = $_SESSION['room'];
+        $query = "delete from rooms where id='$room_id'";
+        mysqli_query($conn, $query);
+        unset($_SESSION['host']);
+        unset($_SESSION['guest']);
+        unset($_SESSION['room']);
+    }
+
     if (!isset($_SESSION['user'])){
         header("Location: start_pg.php");
     }
@@ -51,15 +63,13 @@
                 </div>
             </div>
             <div class="adv">
-                <p class="adv-p">здесь могла быть ваша реклама</p>
+                <p class="adv-ph">здесь могла быть ваша реклама</p>
                 <p class="adv-examp">например:</p>
                 <div class="git-links">
                     <div class="link_cont">
-                        <!-- <img src="../assets/git-ico.svg" alt="git-ico" style="width: 25px; margin-right: 10px;"> -->
                         <a href="https://github.com/maestrying" class="git-link" target="_blank">maestrying</a>
                     </div>
                     <div class="link_cont">
-                        <!-- <img src="../assets/git-ico.svg" alt="git-ico" style="width: 25px; margin-right: 10px;"> -->
                         <a href="https://github.com/lonelywh1te" class="git-link" target="_blank">lonelywh1te</a>
                     </div>
                 </div>

@@ -1,5 +1,15 @@
 <?php
     session_start();
+    include_once ("../php/connect.php");
+
+    if (isset($_SESSION['room'])){
+        $room_id = $_SESSION['room'];
+        $query = "delete from rooms where id='$room_id'";
+        mysqli_query($conn, $query);
+        unset($_SESSION['host']);
+        unset($_SESSION['guest']);
+        unset($_SESSION['room']);
+    }
     if (!isset($_SESSION['user'])){
         header("Location: ../index.php");
     }
