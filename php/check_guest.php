@@ -5,6 +5,6 @@
     $room_id = $_SESSION['room'];
     $result = mysqli_query($conn, "select * from rooms where id='$room_id'");
     $row = $result->fetch_assoc();
-    if ($row['guest_id'] != "-1"){
+    if ($row['guest_id'] != null){
         echo "joined";
     }

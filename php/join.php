@@ -6,7 +6,8 @@
     $find_room = mysqli_query($conn, "select * from rooms where id='$room_id'");
     $finded = $find_room->fetch_assoc();
 
-    if (isset($finded['id'])){
+    if (isset($finded['id']) && $finded['guest_id'] == null){
+
         $login = $_SESSION['user'];
         $result = mysqli_query($conn, "select * from users where login='$login'");
         $user = $result->fetch_assoc();
@@ -30,8 +31,14 @@
         header("Location: ../content/room.php");
     }
     else {
-        $_SESSION['message'] = "Комната не найдена";
-        header("Location: ../content/wait_room.php");
+        if ($finded['guest_id'] != null){
+            $_SESSION['message'] = "Комната занята";
+        }
+        else {
+            $_SESSION['message'] = "Комната не найдена";
+        }
+
+        header("Location: ../content/conn_room.php");
     }
 
 

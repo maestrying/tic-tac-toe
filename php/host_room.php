@@ -8,7 +8,7 @@
     $row = $result->fetch_assoc();
     $room_id = rand(1000, 9999);
 
-    $query = "insert into rooms (id, field, host_id, guest_id, tic, tac, tic_score, tac_score) values ('$room_id', DEFAULT, '$row[id]', DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT)";
+    $query = "insert into rooms (id, host_id) values ('$room_id', '$row[id]')";
     mysqli_query($conn, $query);
 
     $_SESSION['room'] = $room_id;
