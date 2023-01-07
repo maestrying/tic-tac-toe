@@ -60,7 +60,6 @@
             $.ajax({
                 url: "../php/check_guest.php",
                 type: "post",
-                data: $(this).serialize(),
                 success: function (data){
                     if (data === "joined"){
                         window.location.href = '../content/room.php';
@@ -68,7 +67,7 @@
                 }
             })
         }
-        setInterval(check_guest, 1000);
+        setInterval(check_guest, 1000 / 5);
     </script>
 </body>
 </html>

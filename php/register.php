@@ -21,6 +21,12 @@
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
         mysqli_query($conn,"insert into users (login, password) values ('$login', '$hash')");
+
+        $query = mysqli_query($conn, "select id from users where login='$login'");
+        $result = $query->fetch_assoc();
+        $user_id = $result['id'];
+        mysqli_query($conn,"insert into stats (user_id) values ('$user_id')");
+
         $_SESSION['user'] = $login;
         header("Location: ../content/start_pg.php");
     }

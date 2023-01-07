@@ -15,6 +15,14 @@
     if (!isset($_SESSION['user'])){
         header("Location: start_pg.php");
     }
+
+    $login = $_SESSION['user'];
+    $query = mysqli_query($conn, "select * from users where login='$login'");
+    $user = $query->fetch_assoc();
+    $user_id = $user['id'];
+
+    $query = mysqli_query($conn, "select * from stats where user_id='$user_id'");
+    $stats = $query->fetch_assoc();
 ?>
 <!doctype html>
 <html lang="en">
@@ -47,19 +55,19 @@
             <div class="stat_table">
                 <div class="stat_cont">
                     <div class="stat_label">кол-во игр</div>
-                    <div class="stat_num">3</div>
+                    <div class="stat_num"><?= $stats['win'] + $stats['lose'] + $stats['draw'] ?></div>
                 </div>
                 <div class="stat_cont">
                     <div class="stat_label">побед</div>
-                    <div class="stat_num">1</div>
+                    <div class="stat_num"><?= $stats['win'] ?></div>
                 </div>
                 <div class="stat_cont">
                     <div class="stat_label">поражений</div>
-                    <div class="stat_num">1</div>
+                    <div class="stat_num"><?= $stats['lose'] ?></div>
                 </div>
                 <div class="stat_cont">
                     <div class="stat_label">ничьи</div>
-                    <div class="stat_num">1</div>
+                    <div class="stat_num"><?= $stats['draw'] ?></div>
                 </div>
             </div>
             <div class="adv">
